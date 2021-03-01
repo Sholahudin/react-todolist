@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 const TodoForm = () => {
+  const [value, setValue] = useState("");
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    alert(value);
+  };
+
   return (
     <section className="add">
       <form className="add-form">
-        <input type="text" className="add-input" />
+        <input
+          type="text"
+          className="add-input"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
         <button className="add-btn main-black-color">Add</button>
       </form>
     </section>

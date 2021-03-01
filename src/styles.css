@@ -134,6 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 500px;
+  text-align: center;
 }
 
 .todo {
