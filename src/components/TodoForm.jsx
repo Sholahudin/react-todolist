@@ -9,6 +9,8 @@ const TodoForm = () => {
     alert(value);
   };
 
+  console.log("value", value);
+
   return (
     <section className="add">
       <form className="add-form">
