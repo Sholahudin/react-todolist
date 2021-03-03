@@ -13,7 +13,7 @@ const TodoForm = () => {
 
   return (
     <section className="add">
-      <form className="add-form">
+      <form className="add-form" onSubmit={handleFormSubmit}>
         <input
           type="text"
           className="add-input"
