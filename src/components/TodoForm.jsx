@@ -6,7 +6,13 @@ const TodoForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
+    if (!value) {
+      alert("Fill the form first!");
+      return;
+    }
+
     alert(value);
+    setValue("");
   };
 
   console.log("value", value);
