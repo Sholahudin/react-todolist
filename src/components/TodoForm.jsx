@@ -13,11 +13,8 @@ const TodoForm = ({ addTodo }) => {
     }
 
     addTodo(value);
-    alert(value);
     setValue("");
   };
-
-  console.log("value", value);
 
   return (
     <section className="add">
@@ -34,7 +31,7 @@ const TodoForm = ({ addTodo }) => {
   );
 };
 
-TodoForm.propTypes = {
+TodoForm.PropTypes = {
   addTodo: PropTypes.func.isRequired
 };
 export default TodoForm;
