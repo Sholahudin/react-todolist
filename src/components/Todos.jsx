@@ -12,7 +12,7 @@ const Todos = ({ todos }) => {
   );
 };
 
-Todos.PropTypes = {
+Todos.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string
