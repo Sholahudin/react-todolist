@@ -16,7 +16,7 @@ const Todolist = () => {
     <Paper>
       <Header />
       <TodoForm />
-      <Todos />
+      <Todos todos={todos} />
     </Paper>
   );
 };
