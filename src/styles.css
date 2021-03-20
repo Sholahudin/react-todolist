@@ -157,3 +157,15 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
+
+.todo-placeholder-text {
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 16px;
+}
+
+.todo-placeholder-text-addbtn {
+  font-family: "Bungee", sans-serif;
+  font-size: 24px;
+}
