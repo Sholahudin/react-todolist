@@ -13,9 +13,12 @@ const Todolist = () => {
   ]);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value, isCompleted: false }];
-
-    setTodos(addedTodo);
+    if (todos.length < 10) {
+      const addedTodo = [...todos, { text: value, isCompleted: false }];
+      setTodos(addedTodo);
+    } else {
+      alert("No more Line space, Sorry.");
+    }
   };
 
   const completeTodo = (index) => {
