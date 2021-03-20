@@ -8,7 +8,13 @@ const TodoForm = ({ addTodo, showAdd }) => {
     e.preventDefault();
 
     if (!value) {
-      alert("Fill the form first!");
+      alert("No blank todo!");
+      return;
+    }
+
+    if (value.length > 40) {
+      alert("Please, create a shorter todo.");
+      setValue("");
       return;
     }
 
