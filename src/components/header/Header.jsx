@@ -1,19 +1,19 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
 import PropTypes from "prop-types";
 import Button from "../button/Button";
 
-import styles from "./header.module.css";
+// import styles from "./header.module.css";
+import * as styles from "./header.styles";
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   return (
-    <section className={styles.header}>
+    <section css={styles.header}>
       <Button
         text={showAdd ? "Finish" : "Add"}
         onClick={showAddToggle}
         align="left"
       />
-      <h1 className={styles.headerTitle}>Todo Lists</h1>
+      <h1 css={styles.headerTitle}>Todo Lists</h1>
       <Button text="Clear" color="red" onClick={clearTodos} align="right" />
     </section>
   );
