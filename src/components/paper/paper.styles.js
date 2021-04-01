@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-export const container = () =>
+export const paper = () =>
   css`
     width: 600px;
     height: 800px;
@@ -10,9 +10,9 @@ export const container = () =>
     padding: 32px;
   `;
 
-export const frame = () =>
+export const frame = ({ theme }) =>
   css`
-    border: 1px solid var(--main-black-color);
+    border: 1px solid ${theme.color.primary.black};
     height: 100%;
 
     display: flex;
