@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-export const todo = (theme) => {
+export const todo = ({ theme }) =>
   css`
     position: relative;
 
@@ -8,14 +8,13 @@ export const todo = (theme) => {
 
     max-height: 34px;
     margin: 16px 0 0;
-    font-family: "Homemade Apple", sans-serif;
+    font-family: ${theme.font.primary}, sans-serif;
     font-size: 24px;
 
     border-bottom: 1px solid ${theme.color.primary.black};
   `;
-};
 
-export const todoText = () => {
+export const todoText = () =>
   css`
     width: 100%;
     height: 50px;
@@ -23,4 +22,3 @@ export const todoText = () => {
     left: 50%;
     transform: translate(-50%);
   `;
-};

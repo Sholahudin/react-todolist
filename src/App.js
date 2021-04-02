@@ -9,6 +9,9 @@ const theme = {
       black: "#484848",
       red: "#e06262"
     }
+  },
+  font: {
+    primary: "Homemade Apple"
   }
 };
 
