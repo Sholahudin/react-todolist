@@ -11,7 +11,8 @@ const theme = {
     }
   },
   font: {
-    primary: "Homemade Apple"
+    primary: "Homemade Apple",
+    secondary: "Bungee"
   }
 };
 

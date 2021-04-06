@@ -1,12 +1,16 @@
+/** @jsxImportSource @emotion/react */
 import React from "react";
 import Todo from "../todo/Todo";
 import PropTypes from "prop-types";
+import { useTheme } from "@emotion/react";
 
-import styles from "./todos.module.css";
+// import styles from "./todos.module.css";
+import * as styles from "./todos.styles";
 
 const Todos = ({ todos, completeTodo }) => {
+  const theme = useTheme();
   return (
-    <section className={styles.todos}>
+    <section css={styles.todos}>
       {todos.length > 0 &&
         todos.map((todo, index) => {
           return (
@@ -20,10 +24,10 @@ const Todos = ({ todos, completeTodo }) => {
           );
         })}
       {todos.length === 0 && (
-        <div className={styles.todoPlaceholderText}>
+        <div css={styles.todoPlaceholderText({ theme })}>
           Add todo by Clicking{" "}
-          <span className={styles.todoPlaceholderTextAddbtn}>Add</span> button
-          in the left corner.
+          <span css={styles.todoPlaceholderTextAddbtn({ theme })}>Add</span>{" "}
+          button in the left corner.
         </div>
       )}
     </section>
