@@ -11,7 +11,7 @@ export const addForm = () =>
     align-items: flex-start;
   `;
 
-export const addInput = () =>
+export const addInput = ({ theme }) =>
   css`
     background: unset;
     border: unset;
@@ -19,7 +19,7 @@ export const addInput = () =>
 
     flex: 1;
 
-    border-bottom: 1px solid var(--main-red-color);
+    border-bottom: 1px solid ${theme.color.primary.red};
     outline: unset;
 
     font-family: "Homemade Apple", sans-serif;
@@ -27,7 +27,7 @@ export const addInput = () =>
     text-transform: lowercase;
   `;
 
-export const addBtn = () =>
+export const addBtn = ({ theme }) =>
   css`
     font-size: 1.8rem;
     font-family: "Bungee", sans-serif;
@@ -39,6 +39,9 @@ export const addBtn = () =>
     background: unset;
     border: unset;
     outline: unset;
+    &:active {
+      text-shadow: 1px 1px 2px ${theme.color.primary.black};
+    }
   `;
 
 // export const addBtn:active =
