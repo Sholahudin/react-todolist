@@ -1,12 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import PropTypes from "prop-types";
+import PropTypes, { oneOf } from "prop-types";
 
 const Container = ({ children }) => {
-  const containerStyles = () =>
-    css`
-      display: flex;
-    `;
+  const containerStyles = css`
+    display: flex;
+  `;
 
   return (
     <div className="flex-container" css={containerStyles}>
@@ -16,7 +15,7 @@ const Container = ({ children }) => {
 };
 
 Container.propTypes = {
-  flexDiretion
+  flexDirection: oneOf(["row", "row-reverse", "column", "column-reverse"])
 };
 
 export default Container;
