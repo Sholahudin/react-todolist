@@ -5,7 +5,10 @@ export const add = () =>
     padding: 16px;
   `;
 
-export const addForm = () => css``;
+export const addForm = () => css`
+  display: flex;
+  align-items: center;
+`;
 
 export const addInput = ({ theme }) =>
   css`

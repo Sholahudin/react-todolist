@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import PropTypes, { oneOf } from "prop-types";
+import PropTypes from "prop-types";
 
 const Container = ({
   children,
