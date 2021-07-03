@@ -5,11 +5,7 @@ export const add = () =>
     padding: 16px;
   `;
 
-export const addForm = () =>
-  css`
-    display: flex;
-    align-items: flex-start;
-  `;
+export const addForm = () => css``;
 
 export const addInput = ({ theme }) =>
   css`

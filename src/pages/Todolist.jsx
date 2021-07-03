@@ -41,7 +41,11 @@ const Todolist = () => {
 
   return (
     <Paper>
-      <Container flexDirection="column" justifyContent="space-between">
+      <Container
+        flexDirection="column"
+        justifyContent="space-between"
+        height="100%"
+      >
         <Header
           showAddToggle={showAddToggle}
           showAdd={showAdd}
@@ -50,7 +54,6 @@ const Todolist = () => {
         <TodoForm addTodo={addTodo} showAdd={showAdd} />
         <Todos todos={todos} completeTodo={completeTodo} />
       </Container>
-      k
     </Paper>
   );
 };

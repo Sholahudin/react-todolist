@@ -8,7 +8,8 @@ const Container = ({
   flexWrap,
   justifyContent,
   alignItems,
-  alignContent
+  alignContent,
+  height
 }) => {
   const containerStyles = css`
     display: flex;
@@ -17,6 +18,7 @@ const Container = ({
     justify-content: ${justifyContent};
     align-items: ${alignItems};
     align-content: ${alignContent};
+    height: ${height};
   `;
 
   return (
@@ -31,7 +33,8 @@ Container.defaultProps = {
   flexWrap: "nowrap",
   justifyContent: "flex-start",
   alignItems: "stretch",
-  alignContent: "flex-start"
+  alignContent: "flex-start",
+  height: "auto"
 };
 
 Container.propTypes = {
@@ -39,9 +42,14 @@ Container.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  flexDirection: oneOf(["row", "row-reverse", "column", "column-reverse"]),
-  flexWrap: oneOf(["nowrap", "wrap", "wrap-reverse"]),
-  justifyContent: oneOf([
+  flexDirection: PropTypes.oneOf([
+    "row",
+    "row-reverse",
+    "column",
+    "column-reverse"
+  ]),
+  flexWrap: PropTypes.oneOf(["nowrap", "wrap", "wrap-reverse"]),
+  justifyContent: PropTypes.oneOf([
     "flex-start",
     "flex-end",
     "center",
@@ -53,7 +61,7 @@ Container.propTypes = {
     "left",
     "right"
   ]),
-  alignItems: oneOf([
+  alignItems: PropTypes.oneOf([
     "stretch",
     "flex-start",
     "flex-end",
@@ -66,7 +74,7 @@ Container.propTypes = {
     "self-start",
     "self-end"
   ]),
-  alignContent: oneOf([
+  alignContent: PropTypes.oneOf([
     "flex-start",
     "flex-end",
     "center",
@@ -79,7 +87,8 @@ Container.propTypes = {
     "baseline",
     "first baseline",
     "last baseline"
-  ])
+  ]),
+  height: PropTypes.oneOf([PropTypes.number, PropTypes.string])
 };
 
 export default Container;
