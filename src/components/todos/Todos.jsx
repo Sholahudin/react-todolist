@@ -11,8 +11,8 @@ import Container from "../../layout/Container";
 const Todos = ({ todos, completeTodo }) => {
   const theme = useTheme();
   return (
-    <section className="todos-component" align="center">
-      <Container flexDirection="column" minHeight="500px">
+    <section className="todos-component">
+      <Container flexDirection="column" minHeight="500px" align="center">
         {todos.length > 0 &&
           todos.map((todo, index) => {
             return (
