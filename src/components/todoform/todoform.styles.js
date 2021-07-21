@@ -1,22 +1,11 @@
 import { css } from "@emotion/react";
 
-export const add = () =>
-  css`
-    padding: 16px;
-  `;
-
-export const addForm = () => css`
-  display: flex;
-  align-items: center;
-`;
-
 export const addInput = ({ theme }) =>
   css`
     background: unset;
     border: unset;
     padding: 0 64px;
-
-    flex: 1;
+    width: 100%;
 
     border-bottom: 1px solid ${theme.color.primary.red};
     outline: unset;
@@ -42,5 +31,3 @@ export const addBtn = ({ theme }) =>
       text-shadow: 1px 1px 2px ${theme.color.primary.black};
     }
   `;
-
-// export const addBtn:active =
