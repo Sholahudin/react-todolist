@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { withTheme } from "@emotion/react";
 
 const StyledButton = styled.button`
-  color: ${textColor};
-  text-align: ${align};
+  color: ${(props) => props.textColor};
+  text-align: ${(props) => props.align};
   font-size: 1.8rem;
   font-family: "Bungee", sans-serif;
   padding: 16px;
@@ -17,9 +17,27 @@ const StyledButton = styled.button`
 
 class Button extends React.Component {
   render() {
-    const { text, onClick, color, align } = this.props;
+    const { text, onClick, color, align, theme } = this.props;
+    const {
+      color: { primary }
+    } = theme;
 
-    return <StyledButton onClick={onClick}>{text}</StyledButton>;
+    let textColor;
+    switch (color) {
+      case "black":
+        textColor = primary.black;
+        break;
+      case "red":
+        textColor = primary.red;
+        break;
+      default:
+        textColor = primary.black;
+    }
+    return (
+      <StyledButton textColor={textColor} align={align} onClick={onClick}>
+        {text}
+      </StyledButton>
+    );
   }
 
   static defaultProps = {
