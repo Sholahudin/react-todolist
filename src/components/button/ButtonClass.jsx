@@ -19,7 +19,7 @@ class Button extends React.Component {
   render() {
     const { text, onClick, color, align } = this.props;
 
-    return <StyledButton></StyledButton>;
+    return <StyledButton onClick={onClick}>{text}</StyledButton>;
   }
 
   static defaultProps = {
