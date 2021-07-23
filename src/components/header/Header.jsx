@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import PropTypes from "prop-types";
-import Button from "../button/ButtonNoJSX";
+import Button from "../button/ButtonClass";
 import { useTheme } from "@emotion/react";
 
 // import styles from "./header.module.css";
