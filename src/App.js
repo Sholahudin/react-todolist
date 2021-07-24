@@ -13,6 +13,11 @@ const theme = {
   font: {
     primary: "Homemade Apple",
     secondary: "Bungee"
+  },
+  background: {
+    color: {
+      primary: "#f2eecb"
+    }
   }
 };
 

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { withTheme } from "emotion-theming";
+import { withTheme } from "@emotion/react";
 import PropTypes from "prop-types";
 
 const StyledPaper = styled.div`
   width: 600px;
   height: 800px;
-  background-color: ${(props) => props.theme.color.primary};
+  background-color: ${(props) => props.theme.background.color.primary};
   border-radius: 4px;
 
   padding: 32px;
