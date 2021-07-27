@@ -19,21 +19,21 @@ const StyledTodoText = styled.span`
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  text-decoration: ${(props) =>
+    props.isCompleted ? "line-through" : "initial"};
+  color: ${(props) => props.theme.color.primary.black};
 `;
 
 class Todo extends React.Component {
   render() {
-    const { text, completeTodo, index, isCompleted } = this.props;
+    const { text, completeTodo, index, isCompleted, theme } = this.props;
 
     return (
-      <div css={styles.todo({ theme })} onClick={() => completeTodo(index)}>
-        <span
-          css={styles.todoText}
-          style={{ textDecoration: isCompleted ? "line-through" : "initial" }}
-        >
+      <StyledTodo theme={theme} onClick={() => completeTodo(index)}>
+        <StyledTodoText theme={theme} isCompleted={isCompleted}>
           {text}
-        </span>
-      </div>
+        </StyledTodoText>
+      </StyledTodo>
     );
   }
   static propTypes = {
