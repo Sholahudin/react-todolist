@@ -21,7 +21,7 @@ const StyledInput = styled.input`
   text-transform: lowercase;
 `;
 
-class TodoForm extends React.Component() {
+class TodoForm extends React.Component {
   state = {
     value: ""
   };
