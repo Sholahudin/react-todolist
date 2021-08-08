@@ -20,7 +20,35 @@ class Todos extends React.Component {
   render() {
     const { todos, completeTodo } = this.props;
 
-    return;
+    return (
+      <section className="todos-component">
+        <Container flexDirection="column" minHeight="500px" align="center">
+          {todos.length > 0 &&
+            todos.map((todo, index) => {
+              return (
+                <Todo
+                  key={index}
+                  text={todo.text}
+                  isCompleted={todo.isCompleted}
+                  completeTodo={completeTodo}
+                  index={index}
+                />
+              );
+            })}
+          {todos.length === 0 && (
+            <StyledTodoPlaceHolderText>
+              {[
+                "Add todo by Clicking ",
+                <StyledTodoPlaceHolderTextAddbtn>
+                  Add
+                </StyledTodoPlaceHolderTextAddbtn>,
+                " button in the top left corner"
+              ]}
+            </StyledTodoPlaceHolderText>
+          )}
+        </Container>
+      </section>
+    );
   }
 
   static propTypes = {

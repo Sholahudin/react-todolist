@@ -29,7 +29,7 @@ const Todos = ({ todos, completeTodo }) => {
           <div css={styles.todoPlaceholderText({ theme })}>
             Add todo by Clicking{" "}
             <span css={styles.todoPlaceholderTextAddbtn({ theme })}>Add</span>{" "}
-            button in the left corner.
+            button in the top left corner.
           </div>
         )}
       </Container>
